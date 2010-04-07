@@ -1,0 +1,31 @@
+!!! Strict
+%html{ :xmlns => "http://www.w3.org/1999/xhtml" }
+  %head
+    %title
+      Гуглорфографический словарь
+    %meta{ :content => "text/html; charset=utf-8", "http-equiv" => "content-type" }
+    %meta{ :name => "title", :content => "" }
+    %meta{ :name => "keywords", :content => "" }
+    %meta{ :name => "description", :content => "" }
+    %link{ :href => "style.css", :rel => "stylesheet", :type => "text/css", :media => "screen" }
+  %body{ :style => "text-align: center; background: #fff;" }
+    .wrapper
+      %p
+        %img{ :src => "miillk.gif", :alt => "miillk" }
+      %form{ :action => "/search" }
+        %p
+          %input{ :name => "q", :type => "text", :value => @word }
+          %input{ :type => "submit", :value => "правильно написано?" }
+        = yield
+      .push
+    .footer
+      %p
+        %sup><
+          *
+        Коллективный разум не всегда прав.
+      %p
+      Маллоко. орфографический словарь
+      %p
+        %a{ :href => "mailto:miillk@kumekay.com" }
+          miillk@kumekay.com
+

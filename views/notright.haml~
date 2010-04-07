@@ -1,0 +1,10 @@
+%p>
+  Google считает
+  %sup><
+    *
+  , что правильно &nbspb;
+  %span.right<>
+    = @correctWord
+  \, а не 
+  %span.wrong<
+    = @word

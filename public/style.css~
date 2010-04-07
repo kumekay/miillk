@@ -1,0 +1,48 @@
+* {
+ margin: 0;
+ padding: 0;
+ color: #000;
+}
+
+html, body {
+  height: 100%;
+  text-align: center;
+}
+
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -4em;
+  padding 10px;
+}
+
+.footer, .push {
+  height: 50px;
+}
+
+a {
+  color: #336;
+  outline: none;
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  border: none;
+}
+
+.right {
+  font-weight: bold;
+  color: #055;
+}
+
+.wrong {
+  font-weight: bold;
+  color: #505;
+}
+
+
