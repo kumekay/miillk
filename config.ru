@@ -1,5 +1,11 @@
 require 'rubygems'
-require 'sinatra'
+require 'vendor/sinatra/lib/sinatra.rb'
+
+Sinatra::Application.default_options.merge!(
+  :run => false,
+  :env => :production
+)
+
 require 'guglor.rb'
 
 run Sinatra::Application
