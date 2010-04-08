@@ -1,34 +1,40 @@
 set :application, "guglor"
 
-role :web, "kumekay.com"                          # Your HTTP server, Apache/etc
-role :app, "kumekay.com"                          # This may be the same as your `Web` server
+set :domain, 'kumekay.com'
 set :user, 'pipboy' # пользователь удалённого сервера
 set :use_sudo, false # не запускать команды под sudo
 
-set :app_dir, "/home/#{user}/#{application}/" # /home/myuser/myproject/
-set :deploy_to, "#{app_dir}/deploy" # /home/myuser/myproject/deploy
-
 # Настройки репозитория
 set :scm, 'git'
-set :scm_user, 'git' # имя пользователя репозитория
-set :scm_url, "git@kumekay.com:guglor.git" 
-# the rest should be good
-set :repository,  "#{scm_user}@#{web}:git/#{application}.git" 
+set :scm_user, 'git'
+set :repository,  "#{scm_user}@#{domain}:#{application}.git" 
 set :deploy_to, "/home/#{user}/#{application}"
-set :deploy_via, :remote_cache
+# set :deploy_via, :remote_cache
 set :branch, 'master'
 set :git_shallow_clone, 1
 set :scm_verbose, true
+set :runner, user
+set :admin_runner, user
 
 # If you are using Passenger mod_rails uncomment this:
 # if you're still using the script/reapear helper you will need
 # these http://github.com/rails/irs_process_scripts
 
+role :web, domain
+server domain , :web
+
 namespace :deploy do
-#  task :start do ; end
-#  task :stop do ; end
-  task :restart, :roles => :app, :except => { :no_release => true } do
+  task :start do ; end
+
+  task :stop do ; end
+
+  task :restart do
     run " touch #{File.join(current_path,'tmp','restart.txt')}"
+  end
+
+  task :cold do
+    deploy.update
+    deploy.start
   end
 end
 
