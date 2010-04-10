@@ -15,6 +15,7 @@ set :git_shallow_clone, 1
 set :scm_verbose, true
 set :runner, user
 set :admin_runner, user
+ssh_options[:forward_agent] = true
 
 # If you are using Passenger mod_rails uncomment this:
 # if you're still using the script/reapear helper you will need

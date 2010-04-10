@@ -20,7 +20,8 @@ set :admin_runner, user
 # if you're still using the script/reapear helper you will need
 # these http://github.com/rails/irs_process_scripts
 
-role :app, domain
+role :web, domain
+server domain , :web
 
 namespace :deploy do
   task :start do ; end
