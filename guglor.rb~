@@ -64,6 +64,11 @@ get '/:word' do
 #    end
 #    when 5 then @correctYandexWord #If Yandex autocorrect search string
   end
+  if result == 0 
+    haml :right
+  else
+    haml :notright
+  end
   
 end
   
