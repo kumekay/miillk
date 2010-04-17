@@ -2,7 +2,7 @@
 %html{ :xmlns => "http://www.w3.org/1999/xhtml" }
   %head
     %title
-      Гуглорфографический словарь
+      = @word + " - miillk - проверка орфографии"
     %meta{ :content => "text/html; charset=utf-8", "http-equiv" => "content-type" }
     %meta{ :name => "title", :content => "" }
     %meta{ :name => "keywords", :content => "" }
@@ -19,12 +19,23 @@
         = yield
       .push
     .footer
+      /
+        Yandex.Metrika
+      %script{ :src => "//mc.yandex.ru/metrika/watch.js", :type => "text/javascript" }
+      %div{ :style => "display:none;" }
+        %script{ :type => "text/javascript" }
+          try { var yaCounter973606 = new Ya.Metrika(973606); } catch(e){}
+      %noscript
+        %div{ :style => "position:absolute" }
+          %img{ :src => "//mc.yandex.ru/watch/973606", :alt => "" }
+      /
+        \/Yandex.Metrika
       %p
         %sup><
           *
         Коллективный разум не всегда прав.
       %p
-      Маллоко. орфографический словарь
+        Маллоко. орфографический словарь
       %p
         %a{ :href => "mailto:miillk@kumekay.com" }
           miillk@kumekay.com
