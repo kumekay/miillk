@@ -1,0 +1,55 @@
+!!!
+%meta{ :content => "text/html;charset=utf-8", "http-equiv" => "Content-Type" }
+%title
+  Яндекс
+%link{ :href => "http://img.yandex.net/i/favicon.ico", :rel => "shortcut icon" }
+%base{ :target => "_top" }
+%style{ :type => "text/css" }
+  *{font-size:100.01%;margin:0}body{font:.8em Arial,sans-serif;background:#fff url(http://www.tns-counter.ru/V13a****yandex_ru/ru/CP1251/tmsec=yandex_ya/0)}body,a{color:#999}a:hover{color:#f00!important}table{width:100%;height:100%}table table{width:65%;max-width:1000px;min-width:300px;margin:auto}table table td{padding:.25em}#text,#text input{font:100% Arial,sans-serif;width:100%}p{padding:5em 2.2em 13px}body,ul,li{padding:0;list-style:none}span{white-space:nowrap}#head{float:left;width:100%}#head li{font:85% Verdana,sans-serif;padding:5px 10px 7px 0}#head a{color:#000}#head .s{float:left;padding-left:10px}#head .s a{float:left;color:#ee7b00}#head .s i{position:absolute;width:16px;height:16px;margin-left:-19px;background:url(http://img.yandex.net/i/switch-yaru.png) no-repeat}#mail{float:right}#head .user,#head .user *{text-decoration:underline}#head .user *{color:#f00}#head .exit{color:#E03A3A}
+/
+  [if IE]><style>.b-search__wrap{width:expression(document.body.clientWidth>1600 ? '1000px':document.body.clientWidth< 500 ? '300px':'65%')}#head .s i{cursor:hand}</style><![endif]
+%style{ :type => "text/css", :media => "handheld" }
+  body{padding:.5em}tr,td{display:block}table,table table,td,p{padding:0;height:auto;width:100%;min-width:0;text-align:center}#text *{width:180px}input{margin:.5em 0}
+%script{ :type => "text/javascript" }
+  var ieHomeCheck={URL:"http://ya.ru/",linkId:"sethome",clids:[41124],_checkClids:function(){var D=-1;document.body.style.behavior="url(#default#homepage)";if(document.body.isHomePage("http://ya.ru/")||document.body.isHomePage(this.URL)){return 0}for(var C=0;C<this.clids.length;C++){if(document.body.isHomePage(this.URL+"?clid="+this.clids[C])){return this.clids[C]}}return D},_hide:function(){document.getElementById(this.linkId).style.display="none"},_cH:function(F,G){var E=function(C,A,B){return location.protocol+"//clck.yandex.ru/"+B+"/dtype="+C+"/pid=132/cid=2039/path="+A+"/rnd="+((new Date()).getTime()+Math.round(Math.random()*100))+"/*"+G};var H=document.createElement("script");H.src=E("stred",F,"jclck");document.documentElement.getElementsByTagName("head")[0].appendChild(H)},action:function(){this.URL=location.protocol+"//"+location.hostname+"/";var B=this._checkClids();if(B>0){this._hide();this._cH("nextdistrib.homepage."+B,this.URL)}else{if(B==0){this._hide();this._cH("nextdistrib.homepage",this.URL)}}}};function c(A,B,C){new Image().src=location.protocol+"//clck.yandex.ru/click/dtype=stred/pid="+B+"/cid="+C+"/rnd="+((new Date()).getTime()+Math.round(Math.random()*100))+"/*"+(A.href?A.href:"")}function setHome(A,B){try{A.style.behavior="url(#default#homepage)";A.setHomePage(B);return false}catch(C){}}function createElement(B,A){var D=document.createElement(B);for(var C in A){D[C]=A[C]}return document.getElementsByTagName("head")[0].appendChild(D)};
+%table{ :cellspacing => "0", :cellpadding => "0" }
+  %tr
+    %td{ :height => "1", :valign => "top", :colspan => "2" }
+      %ul#head
+        %li.s
+          %a#sethome{ :href => "http://help.yandex.ru/start/", :onclick => "c(this,17,1755);return setHome(this,'http://ya.ru/?clid='+(location.href.match(/clid=(\\d+)/)?location.href.match(/clid=(\\d+)/)[1]:'41124'))" }
+            Сделать стартовой
+        %li#mail
+          %a{ :href => "http://mail.yandex.ru", :onclick => "c(this,17,1080)" }
+            Войти в почту
+      /
+        [if IE]><script type="text/javascript">ieHomeCheck.action();</script><![endif]
+  %tr
+    %td{ :align => "center", :colspan => "2" }
+      %form{ :onsubmit => "var clid=location.href.match(/clid=(\\d+)/);location.href=this.action+\"?text=\"+encodeURIComponent(this.text.value)+(clid?\"&\"+clid[0]:\"\");return false", :action => "http://yandex.ru/yandsearch" }
+        %table.b-search__wrap
+          %tr
+            %td
+              %a{ :href => "http://www.yandex.ru", :onclick => "c(this,17,1081)" }
+                %img{ :src => "http://ya.ru/logo.png", :border => "0", :height => "44", :alt => "\320\257\320\275\320\264\320\265\320\272\321\201", :width => "100" }
+            %td#text
+              %div
+                %input{ :name => "text", :size => "50", :maxlength => "300" }
+            %td
+              %input{ :type => "submit", :value => "\320\235\320\260\320\271\321\202\320\270", :onclick => "c(this,17,1082)" }
+  %tr{ :valign => "bottom" }
+    %td{ :height => "1", :width => "50%" }
+      %p{ :align => "right" }
+        %span
+          © 1997—2010
+        «
+        %a{ :href => "http://www.yandex.ru", :onclick => "c(this,17,1083)" }
+          Яндекс
+        »
+    %td{ :width => "50%" }
+      %p
+        Дизайн — 
+        %a{ :href => "http://www.artlebedev.ru", :onclick => "c(this,17,1084)" }
+          Студия Артемия Лебедева
+%script{ :type => "text/javascript" }
+  if (self.parent.frames.length != 0) self.parent.location = document.location; else { var t = document.forms[0].text; try { t.type = 'search' } catch (e) { }; t.focus(); t.value = ''; setTimeout(function(){ t.focus(); t.value = ''; createElement('script', { type: 'text/javascript', charset: 'UTF-8', src: 'http://clck.yandex.ru/redir/dtype=stred/pid=17/cid=1729/*http://export.yandex.ru/morda/mail.xml?host=yandex.ru' }); }, 9); }

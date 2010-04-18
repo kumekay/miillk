@@ -2,9 +2,9 @@
   Коллективный разум
   %sup><
     *
-  рекомендует писать 
-  %span.right<>
-    = @correctWord
+  \ считает, что правильнее писать
+  %span.right><
+    = ' "' + @correctWord + '"'
   \, а не 
-  %span.wrong<
-    = @word
+  %span.notright
+    = '"' + @word + '"'

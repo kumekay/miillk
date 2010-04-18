@@ -4,6 +4,7 @@ require 'nokogiri'
 require 'open-uri'
 require 'haml'
 
+
 get '/' do
  haml ""
 end

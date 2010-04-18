@@ -3,41 +3,45 @@
   %head
     %title
       = @word + " - " if @word
-      " miillk - проверка орфографии коллективным разумом"
+      miillk - проверка орфографии коллективным разумом
     %meta{ :content => "text/html; charset=utf-8", "http-equiv" => "content-type" }
     %meta{ :name => "title", :content => "" }
     %meta{ :name => "keywords", :content => "" }
     %meta{ :name => "description", :content => "" }
     %link{ :href => "style.css", :rel => "stylesheet", :type => "text/css", :media => "screen" }
-  %body{ :style => "text-align: center; background: #fff;" }
-    .wrapper
-      %p
-        %img{ :src => "miillk.gif", :alt => "miillk" }
-      %form{ :action => "/search" }
-        %p
-          %input{ :name => "q", :type => "text", :value => @word }
-          %input{ :type => "submit", :value => "правильно написано?" }
-        = yield
-      .push
-    .footer
-      /
-        Yandex.Metrika
-      %script{ :src => "//mc.yandex.ru/metrika/watch.js", :type => "text/javascript" }
-      %div{ :style => "display:none;" }
-        %script{ :type => "text/javascript" }
-          try { var yaCounter973606 = new Ya.Metrika(973606); } catch(e){}
-      %noscript
-        %div{ :style => "position:absolute" }
-          %img{ :src => "//mc.yandex.ru/watch/973606", :alt => "" }
-      /
-        \/Yandex.Metrika
-      %p
-        %sup><
-          *
-        Коллективный разум не всегда прав.
-      %p
-        Маллоко. орфографический словарь
-      %p
-        %a{ :href => "mailto:miillk@kumekay.com" }
-          miillk@kumekay.com
-
+    / %link{ :href => "style.css", :rel => "stylesheet", :type => "text/css", :media => "handheld" }
+  %body
+    %table{ :cellspacing => "0", :cellpadding => "0" }
+      %tr{ :valign => "middle"}
+        %td{ :align => "center" }
+          %p
+            %img{ :src => "miillk.gif", :alt => "miillk" }
+          %form{ :action => "/" }
+            %p
+              %input{ :name => "q", :type => "text", :size => "50", :maxlength => "250", :value => @word }
+              %input{ :type => "submit", :value => "правильно написано?" }
+          = yield
+      %tr{ :valign => "bottom" }
+        %td{ :align => "center" }
+          %p.notice<>
+            %sup.notice><
+              *
+            коллективный разум не всегда прав
+          %p.about
+            %b.about
+              miillk
+            \- проверка орфографии коллективным разумом
+          %p.about
+            %a{ :href => "mailto:miillk@kumekay.com" }
+              miillk@kumekay.com
+          /
+            Yandex.Metrika
+          %script{ :src => "//mc.yandex.ru/metrika/watch.js", :type => "text/javascript" }
+          %div{ :style => "display:none;" }
+            %script{ :type => "text/javascript" }
+              try { var yaCounter973606 = new Ya.Metrika(973606); } catch(e){}
+          %noscript
+            %div{ :style => "position:absolute" }
+              %img{ :src => "//mc.yandex.ru/watch/973606", :alt => "" }
+          /
+            \/Yandex.Metrika

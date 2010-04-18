@@ -4,18 +4,11 @@ require 'nokogiri'
 require 'open-uri'
 require 'haml'
 
-
 get '/' do
- haml ""
-end
-
-
-#get  %r{/\/search\?q=(.+)} do |q|
-get '/search' do
   if params[:q] 
     redirect '/' + params[:q] 
   else
-    redirect '/'
+    haml ""
   end
 end
 
