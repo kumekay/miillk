@@ -1,5 +1,5 @@
 require 'rubygems'
-require 'sinatra'
+require 'vendor/sinatra/lib/sinatra.rb'
 require 'nokogiri'
 require 'open-uri'
 require 'haml'

@@ -1,13 +1,15 @@
 set :application, "guglor"
 
-set :domain, 'kumekay.com'
+#set :domain, 'kumekay.com'
+set :domain, '173.203.103.119'
+set :scm_domain, 'kumekay.com'
 set :user, 'pipboy' # пользователь удалённого сервера
 set :use_sudo, false # не запускать команды под sudo
 
 # Настройки репозитория
 set :scm, 'git'
 set :scm_user, 'git'
-set :repository,  "#{scm_user}@#{domain}:#{application}.git" 
+set :repository,  "#{scm_user}@#{scm_domain}:#{application}.git" 
 set :deploy_to, "/home/#{user}/#{application}"
 # set :deploy_via, :remote_cache
 set :branch, 'master'
