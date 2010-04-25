@@ -68,7 +68,7 @@ get '/:word' do
       haml :notright
     end
   else
-    raise  'невозможно получить данные'
+    raise  503
   end
 end
 

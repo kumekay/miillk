@@ -3,7 +3,7 @@ require 'vendor/sinatra/lib/sinatra.rb'
 require 'nokogiri'
 require 'open-uri'
 require 'haml'
-require 'ruby-debug'
+#require 'ruby-debug'
 
 #configure :production, :development do
   not_found do
@@ -59,7 +59,7 @@ get '/:word' do
     correctYandexWord = nil
   end
   @correctWord =  [correctGoogleWord, correctYandexWord].uniq  # combine google and yandex results
- debugger
+ #debugger
   if @correctWord.any?
     @correctWord -= ['', nil]
     if @correctWord.empty?
