@@ -68,3 +68,12 @@ p.notice {
   color: #ccc;
 }
 
+h1 {
+  font-size: 130%;
+  font-weight: bold;
+  color: #555;
+}
+
+.blind {
+  font-weight: normal;
+}

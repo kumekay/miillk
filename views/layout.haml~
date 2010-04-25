@@ -16,6 +16,10 @@
         %td{ :align => "center" }
           %p
             %img{ :src => "miillk.gif", :alt => "miillk" }
+          %h1
+            проверка орфографии коллективным разумом
+            %sup.blind><
+              *
           %form{ :action => "/" }
             %p
               %input{ :name => "q", :type => "text", :size => "50", :maxlength => "250", :value => @word }
@@ -26,7 +30,7 @@
           %p.notice<>
             %sup.notice><
               *
-            коллективный разум не всегда прав
+            коллективный разум иногда заблуждается
           %p.about
             %b.about
               miillk
