@@ -23,7 +23,9 @@ get '/' do
   if params[:q] 
     redirect '/' + params[:q].strip
   else
-    haml ""
+    examples = ['miillk','маллоко','кантак','педогог','checkinn']
+    @example = examples[rand(examples.size)]
+    haml :root
   end
 end
 
@@ -68,7 +70,7 @@ get '/:word' do
       haml :notright
     end
   else
-    raise  503
+    error  503
   end
 end
 

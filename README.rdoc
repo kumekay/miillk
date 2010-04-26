@@ -1,0 +1,8 @@
+= Miillk - collective mind spellchecker 
+
+Uses Google and Yandex 'Did you mean?' tips for spell checking
+Miilk[//miillk.com]
+
+== Author
+Sergey Silnov <po@kumekay.com>
+
